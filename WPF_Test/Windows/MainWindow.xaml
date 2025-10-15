@@ -5,8 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <!--Левая часть окна-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <!--Основной текст для входа-->
+            <TextBlock Text="Авторизация" FontSize="36" 
+            Grid.Column="1" Grid.Row="1"/>
+
+            <TextBlock Text="Логин" FontSize="24"
+            Grid.Column="1" Grid.Row="2"/>
+
+            <TextBox Grid.Column="1" Grid.Row="3"/>
+
+            <TextBlock Text="Пароль" FontSize="24"
+            Grid.Column="1" Grid.Row="4"/>
+
+            <PasswordBox Grid.Column="1" Grid.Row="5"/>
+
+            <Button Background="#3c3c3c" Content="Войти" FontSize="16"                    Foreground="White"
+            Grid.Column="1" Grid.Row="7"/>
+
+        </Grid>
+
+        <!--Правая часть окна-->
+        <Grid Grid.Column="1" Background="#FF434341">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Нет аккаунта?" Foreground="White" FontSize="36"
+            Grid.Column="1" Grid.Row="1"/>
+
+            <TextBlock TextWrapping="Wrap" Foreground="White" FontSize="14"
+          Text="Зарегистрируйтесь на платформе, чтобы получить полный доступ ко всем её возможностям. После входа вы сможете управлять своими личными данными. Создайте аккаунт всего за пару минут, чтобы продолжить работу."
+            Grid.Column="1" Grid.Row="3"/>
+
+            <Button Background="Transparent" BorderBrush="White"
+                Content="Зарегистрироваться" Foreground="White" FontSize="16"
+            Grid.Column="1" Grid.Row="5" Click="Button_Click"/>
+
+        </Grid>
     </Grid>
 </Window>
