@@ -14,7 +14,7 @@ namespace WPF_Test
     /// </summary>
     public partial class App : Application
     {
-        public static Test_BaseEntities context = new Test_BaseEntities();
-        public static User currentUser;
+        public static MagicFlaconDBEntities context = new MagicFlaconDBEntities();
+        public static Users currentUser;
     }
 }

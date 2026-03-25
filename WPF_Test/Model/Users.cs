@@ -12,14 +12,22 @@ namespace WPF_Test.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class Users
     {
-        public int Id { get; set; }
-        public int IdUser { get; set; }
-        public int IdProduct { get; set; }
-        public System.DateTime DateOrder { get; set; }
+        public Users()
+        {
+            this.Favorites = new HashSet<Favorites>();
+            this.Orders = new HashSet<Orders>();
+        }
     
-        public virtual Product Product { get; set; }
-        public virtual User User { get; set; }
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public string Phone { get; set; }
+        public string Role { get; set; }
+    
+        public virtual ICollection<Favorites> Favorites { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

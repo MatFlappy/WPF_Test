@@ -13,10 +13,10 @@ namespace WPF_Test.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Test_BaseEntities : DbContext
+    public partial class MagicFlaconDBEntities : DbContext
     {
-        public Test_BaseEntities()
-            : base("name=Test_BaseEntities")
+        public MagicFlaconDBEntities()
+            : base("name=MagicFlaconDBEntities")
         {
         }
     
@@ -25,11 +25,11 @@ namespace WPF_Test.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Category> Category { get; set; }
-        public DbSet<Order> Order { get; set; }
-        public DbSet<Product> Product { get; set; }
-        public DbSet<Role> Role { get; set; }
+        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Favorites> Favorites { get; set; }
+        public DbSet<Orders> Orders { get; set; }
+        public DbSet<Products> Products { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public DbSet<User> User { get; set; }
+        public DbSet<Users> Users { get; set; }
     }
 }

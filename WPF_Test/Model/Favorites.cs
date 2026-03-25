@@ -12,16 +12,13 @@ namespace WPF_Test.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Category
+    public partial class Favorites
     {
-        public Category()
-        {
-            this.Product = new HashSet<Product>();
-        }
-    
         public int Id { get; set; }
-        public string Name { get; set; }
+        public Nullable<int> UserId { get; set; }
+        public Nullable<int> ProductId { get; set; }
     
-        public virtual ICollection<Product> Product { get; set; }
+        public virtual Products Products { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

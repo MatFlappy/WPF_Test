@@ -12,16 +12,15 @@ namespace WPF_Test.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Role
+    public partial class Orders
     {
-        public Role()
-        {
-            this.User = new HashSet<User>();
-        }
-    
         public int Id { get; set; }
-        public string Role1 { get; set; }
+        public Nullable<int> UserId { get; set; }
+        public Nullable<int> ProductId { get; set; }
+        public Nullable<System.DateTime> OrderDate { get; set; }
+        public string Status { get; set; }
     
-        public virtual ICollection<User> User { get; set; }
+        public virtual Products Products { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

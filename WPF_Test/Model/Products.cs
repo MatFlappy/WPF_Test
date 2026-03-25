@@ -12,20 +12,23 @@ namespace WPF_Test.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Products
     {
-        public Product()
+        public Products()
         {
-            this.Order = new HashSet<Order>();
+            this.Favorites = new HashSet<Favorites>();
+            this.Orders = new HashSet<Orders>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Photo { get; set; }
-        public decimal Price { get; set; }
-        public int IdCategory { get; set; }
+        public string Description { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public Nullable<int> CategoryId { get; set; }
+        public string ImagePath { get; set; }
     
-        public virtual Category Category { get; set; }
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual Categories Categories { get; set; }
+        public virtual ICollection<Favorites> Favorites { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }
